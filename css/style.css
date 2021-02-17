@@ -1,9 +1,6 @@
-/* change these */
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
-
+/* fonts */
+@import url("https://use.typekit.net/jow4swt.css");
+@import url("https://use.typekit.net/jow4swt.css");
 * {
   box-sizing: border-box;
 }
@@ -14,37 +11,32 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: #050415;
+  --link-color: #bf3064;
+  --link-hover-color: #543254;
+  --color-4: #0e1554;
+  --color-5: #d23e2f;
+  --color-6: #5b0c13;
+  --color-7: #134fb3;
 
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
-  --main-text-color: #000;
+  --primary-font: westsac, sans-serif;
+  --secondary-font: houschka-pro, sans-serif;
+  --main-text-color: #cdb38b;
 
   --white-space: 1rem;
 }
-
-button {
-  transition: all 3s;
+main {
+  background-color: #777;
 }
+
 a {
   transition: all 3s;
 }
-button:hover {
-  background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
-}
 
-button:active {
-  background-color: var(--bg-color);
-}
-
-a:hover {
+a:hover.typography-sample {
   color: var(--link-hover-color);
-  font-size: 4rem;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px var(--color-5);
 }
 html {
   font-size: 100%;
@@ -62,6 +54,11 @@ footer {
   max-width: 1300px;
   margin: 0 auto;
   padding: calc(2 * var(--white-space));
+}
+.swatchgrid {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
 }
 
 .full-width {
@@ -106,8 +103,8 @@ section {
 .section-heading {
   font-style: italic;
   font-size: 1.3rem;
-  color: #777;
-  margin: 0.5rem 0;
+  color: black;
+  margin: 2rem 0;
 }
 
 ul {
@@ -144,27 +141,11 @@ ul li:last-child {
 .color-swatch-5 {
   background-color: var(--color-5);
 }
-
-.textures li {
-  height: 30vw;
-  width: 40%;
-  margin-right: 5vw;
+.color-swatch-6 {
+  background-color: var(--color-6);
 }
-
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
-
-.texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
-}
-
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
-
-.texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
+.color-swatch-7 {
+  background-color: var(--color-7);
 }
 
 .images ul {
@@ -176,33 +157,6 @@ ul li:last-child {
   display: block;
   /*margin-right: 5vw;*/
   margin-bottom: 1rem;
-}
-
-button {
-  padding: 1rem;
-  border-radius: 4px;
-  background: var(--link-color);
-  text-align: center;
-  text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
-  letter-spacing: 1px;
-  color: white;
-  text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  margin: 0 1rem 1rem 0;
-}
-
-.secondary-button {
-  background: var(--color-5);
-}
-
-button:focus,
-button:active,
-button:focus-within {
-  outline: 0;
-  border-radius: 4px;
 }
 
 .typography-main {
@@ -261,6 +215,29 @@ p[class*="font-details-"] {
 
 footer {
   font-style: italic;
+}
+.font-name {
+  color: #050415;
+}
+
+.primary-button {
+  padding: 1rem;
+  border-radius: 4px;
+  background: var(--color-4);
+  text-align: center;
+  text-decoration: none;
+  font: bold 1.25em/1 var(--primary-font);
+  letter-spacing: 1px;
+  color: #cdb38b;
+  text-transform: uppercase;
+  margin: 0 1rem 1rem 0;
+  box-shadow: 0 0 5px #543254, 0 0 10px #543254, 0 0 15px #543254;
+}
+.primary-button:hover {
+  color: #cdb38b;
+  background: #d23e2f;
+  box-shadow: 0 0 10px #bf3064, 0 0 15px #bf3064, 0 0 20px #bf3064;
+  transition-delay: 0.5s;
 }
 
 @media (min-width: 800px) {
